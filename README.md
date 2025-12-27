@@ -1,7 +1,11 @@
 🩸 Blood Link
+
+
 Blood Link is a smart blood connectivity platform that connects blood donors, patients, and hospitals to make blood donation faster, easier, and more reliable through a web-based system.
 
+
 🚀 Current Features
+
 
 Find blood donors based on location and blood group
 Connect patients with nearby hospitals
@@ -9,7 +13,9 @@ Simple and responsive frontend interface
 Backend API for managing blood-related data
 Real-time interaction between frontend and backend
 
+
 🛠️ Installation & Setup
+
 
 1️⃣ Check Python Installation
 
@@ -51,7 +57,9 @@ Open the frontend project
 
 Click “Go Live” to run the application
 
+
 👥 Team Credits
+
 
 Frontend: Rakibul Hasan Rifat, Nirvik Chakroborty
 
