@@ -18,13 +18,9 @@ Real-time interaction between frontend and backend
 
 
 1️⃣ Check Python Installation
-
 Make sure Python is installed on your system:
-
 Copy code
-
 Bash
-
 python --version
 
 2️⃣ Install Backend Dependencies
