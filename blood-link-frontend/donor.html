@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration - Blood Link</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🩸 BLOOD LINK</h1>
+            <button class="btn-back" onclick="location.href='index.html'">← Back to Home</button>
+        </header>
+
+        <main class="main-content">
+            <h2>Donor Registration</h2>
+
+            <section class="donor-type-selection" id="donorTypeSection">
+                <h3>Select Your Donation Preference</h3>
+                <div class="action-cards">
+                    <div class="card selection-card" data-type="emergency">
+                        <div class="card-icon">🚨</div>
+                        <h3>Emergency Only</h3>
+                        <p>I want to donate only in emergency situations</p>
+                    </div>
+
+                    <div class="card selection-card" data-type="hospital">
+                        <div class="card-icon">🏥</div>
+                        <h3>Hospital Stock Support</h3>
+                        <p>I'm willing to donate to hospitals when blood stock is needed</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section hidden" id="donorFormSection">
+                <form id="donorForm" class="form">
+                    <input type="hidden" id="donorType" name="donorType">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bloodGroup">Blood Group *</label>
+                        <select id="bloodGroup" name="bloodGroup" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="division">Division *</label>
+                        <select id="division" name="division" required>
+                            <option value="">Select Division</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="district">District *</label>
+                        <select id="district" name="district" required disabled>
+                            <option value="">Select Division First</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastDonation">Last Donation Date *</label>
+                        <input type="date" id="lastDonation" name="lastDonation" required>
+                    </div>
+
+                    <div class="form-group checkbox-group hidden" id="hospitalDonorField">
+                        <label>
+                            <input type="checkbox" id="willingForHospital" name="willingForHospital">
+                            I'm willing to donate to hospitals when their blood stock is low
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="location.href='index.html'">Cancel</button>
+                        <button type="submit" class="btn-primary">Register as Donor</button>
+                    </div>
+
+                    <div class="loading-message hidden" id="loadingMessage">
+                        <div class="spinner"></div>
+                        <p>Registering your information...</p>
+                    </div>
+
+                    <div class="error-message hidden" id="errorMessage"></div>
+                    <div class="success-message hidden" id="successMessage"></div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

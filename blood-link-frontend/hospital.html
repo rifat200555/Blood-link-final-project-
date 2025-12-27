@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Registration - Blood Link</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🩸 BLOOD LINK</h1>
+            <button class="btn-back" onclick="location.href='index.html'">← Back to Home</button>
+        </header>
+
+        <main class="main-content">
+            <h2>Hospital Registration & Blood Inventory</h2>
+
+            <section class="form-section">
+                <h3>Hospital Information</h3>
+                <form id="hospitalForm" class="form">
+                    <div class="form-group">
+                        <label for="hospitalName">Hospital Name *</label>
+                        <select id="hospitalName" name="hospitalName" required>
+                            <option value="">Select Hospital</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hospitalAddress">Hospital Address</label>
+                        <input type="text" id="hospitalAddress" name="hospitalAddress" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="division">Division *</label>
+                        <select id="division" name="division" required>
+                            <option value="">Select Division</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="district">District *</label>
+                        <select id="district" name="district" required disabled>
+                            <option value="">Select Division First</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPhone">Contact Phone *</label>
+                        <input type="tel" id="contactPhone" name="contactPhone" required>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Blood Inventory (Available Units)</h3>
+                        <div class="inventory-grid">
+                            <div class="form-group">
+                                <label for="aPos">A+</label>
+                                <input type="number" id="aPos" name="aPos" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="aNeg">A-</label>
+                                <input type="number" id="aNeg" name="aNeg" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="bPos">B+</label>
+                                <input type="number" id="bPos" name="bPos" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="bNeg">B-</label>
+                                <input type="number" id="bNeg" name="bNeg" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="abPos">AB+</label>
+                                <input type="number" id="abPos" name="abPos" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="abNeg">AB-</label>
+                                <input type="number" id="abNeg" name="abNeg" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="oPos">O+</label>
+                                <input type="number" id="oPos" name="oPos" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="oNeg">O-</label>
+                                <input type="number" id="oNeg" name="oNeg" min="0" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="acceptVoluntary" name="acceptVoluntary">
+                            Accept blood from voluntary donors when stock is low (non-emergency)
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="location.href='index.html'">Cancel</button>
+                        <button type="submit" class="btn-primary">Register Hospital</button>
+                    </div>
+
+                    <div class="loading-message hidden" id="loadingMessage">
+                        <div class="spinner"></div>
+                        <p>Registering hospital information...</p>
+                    </div>
+
+                    <div class="error-message hidden" id="errorMessage"></div>
+                    <div class="success-message hidden" id="successMessage"></div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platelet Collection Hospitals - Blood Link</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🩸 BLOOD LINK</h1>
+            <button class="btn-back" onclick="location.href='index.html'">← Back to Home</button>
+        </header>
+
+        <main class="main-content">
+            <h2>Find Platelet Collection Hospitals</h2>
+            <p class="subtitle">Additional Resource - Find hospitals with platelet collection facilities</p>
+
+            <section class="form-section">
+                <form id="plateletForm" class="form" onsubmit="return false;"> <!-- prevent default submit -->
+                    <div class="form-group">
+                        <label for="division">Your Division *</label>
+                        <select id="division" name="division" required>
+                            <option value="">Select Division</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="district">Your District</label>
+                        <select id="district" name="district" disabled>
+                            <option value="">Select Division First</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="location.href='index.html'">Cancel</button>
+                        <button type="button" class="btn-primary" onclick="showPlateletHospitalsFixed()">Find Platelet Hospitals</button>
+                    </div>
+
+                    <div class="loading-message hidden" id="loadingMessage">
+                        <div class="spinner"></div>
+                        <p>Searching for platelet collection facilities...</p>
+                    </div>
+
+                    <div class="error-message hidden" id="errorMessage"></div>
+                </form>
+            </section>
+
+            <section class="results-section hidden" id="resultsSection">
+                <h3>Platelet Collection Hospitals Near You</h3>
+                <div id="plateletResults" class="results-container">
+                    <p class="no-results">Waiting for search...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/platelet_data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
